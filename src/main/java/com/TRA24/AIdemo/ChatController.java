@@ -14,8 +14,8 @@ public class ChatController {
         this.chatClient = chatClient;
     }
 
-    @GetMapping("chat")
-    public String generate(@RequestParam(value = "message", defaultValue = "What is AI Chatbot?") String message){
+    @GetMapping("/chat")
+    public String generate(@RequestParam(value = "message", defaultValue = "tell me a dad joke") String message){
         return chatClient.call(message);
     }
 }
